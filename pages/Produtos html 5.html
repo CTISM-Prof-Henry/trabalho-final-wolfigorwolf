@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Tudo</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        /* CABEÇALHO */
+        header{
+            background:#a9a9a9;
+            padding:20px;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:40px;
+            list-style:none;
+        }
+
+        nav li{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        nav a{
+            text-decoration:none;
+        }
+
+        nav button{
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            background:white;
+            cursor:pointer;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        nav button:hover{
+            background:#e0e0e0;
+        }
+
+        .logo{
+            width:125px;
+            height:125px;
+            object-fit:cover;
+            border-radius:10px;
+            margin-bottom:10px;
+        }
+
+        /* CONTEÚDO */
+        main{
+            padding:20px;
+        }
+
+        h2{
+            margin-bottom:20px;
+        }
+
+        .container{
+            display:flex;
+            gap:20px;
+        }
+
+        aside{
+            width:20%;
+            background:white;
+            padding:15px;
+            border-radius:10px;
+        }
+
+        aside ul{
+            margin-top:10px;
+            padding-left:20px;
+        }
+
+        aside li{
+            margin-bottom:10px;
+        }
+
+        /* PRODUTOS */
+        .produtos{
+            width:80%;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .produto{
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 2px 5px rgba(0,0,0,.1);
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            height:380px;
+        }
+
+        .produto img{
+            width:120px;
+            height:120px;
+            object-fit:contain;
+            margin:auto;
+        }
+
+        .produto p{
+            margin:8px 0;
+        }
+
+        .preco-antigo{
+            text-decoration:line-through;
+            color:gray;
+        }
+
+        .preco{
+            color:red;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        footer{
+            margin-top:30px;
+            padding:20px;
+            text-align:center;
+            background:white;
+        }
+
+        footer img{
+            max-width:300px;
+            width:100%;
+        }
+
+        @media(max-width:768px){
+
+            nav ul{
+                flex-direction:column;
+            }
+
+            .container{
+                flex-direction:column;
+            }
+
+            aside,
+            .produtos{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+
+            <li>
+                <img class="logo"
+                     src="../Image/WhatsApp Image 2026-03-31 at 16.02.38.jpeg"
+                     alt="Logo">
+
+                <a href="Index.html">
+                    <button>Página Inicial</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="Produtos.html">
+                    <button>Produtos</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="Lojas.html">
+                    <button>Lojas</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="Contatos.html">
+                    <button>Contatos</button>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Produtos</h2>
+
+    <section class="container">
+
+        <aside>
+            <h3>Categorias</h3>
+            <ul>
+                <li>Geladeiras (3)</li>
+                <li>Fogões (7)</li>
+                <li>Microondas (4)</li>
+                <li>Smart TVs (8)</li>
+                <li>Lavadoras de Roupas (3)</li>
+            </ul>
+        </aside>
+
+        <section class="produtos">
+
+            <article class="produto">
+                <img src="../Image/Geladeira Brastemp.png">
+                <p>Geladeira Frost Free Brastemp 540 Litros</p>
+                <hr>
+                <p class="preco-antigo">R$ 5.399,00</p>
+                <p class="preco">R$ 4.999,00</p>
+            </article>
+
+            <article class="produto">
+                <img src="../Image/Fogão Brastemp.png">
+                <p>Fogão Brastemp 6 Bocas</p>
+                <hr>
+                <p class="preco-antigo">R$ 3.500,00</p>
+                <p class="preco">R$ 2.999,00</p>
+            </article>
+
+            <article class="produto">
+                <img src="../Image/Microondas 34 Litros Electrolux.png">
+                <p>Microondas Brastemp 30 Litros</p>
+                <hr>
+                <p class="preco-antigo">R$ 1.099,00</p>
+                <p class="preco">R$ 899,00</p>
+            </article>
+
+            <article class="produto">
+                <img src="../Image/Smart TV LG.png">
+                <p>Smart TV LG 65 Polegadas</p>
+                <hr>
+                <p class="preco-antigo">R$ 4.599,00</p>
+                <p class="preco">R$ 3.999,00</p>
+            </article>
+
+            <article class="produto">
+                <img src="../Image/Lava Roupa Brastemp.png">
+                <p>Lava Roupas Brastemp 15KG</p>
+                <hr>
+                <p class="preco-antigo">R$ 3.899,00</p>
+                <p class="preco">R$ 3.599,00</p>
+            </article>
+
+            <article class="produto">
+                <img src="../Image/Smart TV 65 TCL.png">
+                <p>Smart TV 65 Polegadas TCL LED</p>
+                <hr>
+                <p class="preco-antigo">R$ 3.099,00</p>
+                <p class="preco">R$ 2.899,00</p>
+            </article>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+    <h4>Formas de pagamento</h4>
+    <img src="../Image/Formas de pagamento.png">
+</footer>
+
+</body>
+</html>
